@@ -1,0 +1,1 @@
+export const AUTO_SAVE_INTERVAL = 10 * 60

@@ -1,6 +1,8 @@
+import { AUTO_SAVE_INTERVAL } from '../constants/timer'
+
 let timer: number | null = null
 
-export function startTimer(fn: Function, interval = 5 * 60) {
+export function startTimer(fn: Function, interval = AUTO_SAVE_INTERVAL) {
   if (timer) {
     return
   }

@@ -12,16 +12,21 @@ export default function Operator(props: { refresh: () => Promise<void> }) {
     await props.refresh()
   }
 
+  const timerFn = async () => {
+    await saveNow()
+    await props.refresh()
+  }
+
   async function autoSave(isSave: boolean) {
     setIsAutoSave(isSave)
     localStorage.setItem('autoSave', String(isSave))
     // await invoke(isSave ? 'resume_timer' : 'pause_timer')
-    isSave ? startTimer(saveNow) : stopTimer()
+    isSave ? startTimer(timerFn) : stopTimer()
   }
 
   onMount(() => {
     if (isAutoSave()) {
-      startTimer(saveNow)
+      startTimer(timerFn)
     }
   })
 
