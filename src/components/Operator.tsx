@@ -5,7 +5,7 @@ import { saveNow } from '../util/file'
 
 export default function Operator(props: { refresh: () => Promise<void> }) {
   const [note, setNote] = createSignal('')
-  const [isAutoSave, setIsAutoSave] = createSignal(Boolean(localStorage.getItem('autoSave')) || false)
+  const [isAutoSave, setIsAutoSave] = createSignal(localStorage.getItem('autoSave') === 'true')
 
   async function submit() {
     await saveNow(note())
