@@ -24,6 +24,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: setup package manager
         run: npm install pnpm -g
 
       - name: install Rust stable
