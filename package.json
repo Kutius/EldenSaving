@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:client": "tauri build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp",
     "serve": "vite preview",
     "tauri": "tauri",
     "up": "npx taze -I"
