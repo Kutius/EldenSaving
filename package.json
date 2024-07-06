@@ -8,20 +8,24 @@
     "dev": "vite",
     "build": "vite build",
     "build:client": "tauri build",
+    "release": "bumpp && npm publish",
     "serve": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "up": "npx taze -I"
   },
   "license": "MIT",
   "dependencies": {
-    "@tauri-apps/api": "^1.5.2",
-    "solid-js": "^1.8.9"
+    "@tauri-apps/api": "^1.6.0",
+    "solid-js": "^1.8.18"
   },
   "devDependencies": {
     "@iconify-json/solar": "^1.1.9",
-    "@tauri-apps/cli": "^1.5.8",
-    "typescript": "^5.0.2",
-    "unocss": "^0.58.3",
-    "vite": "^5.0.11",
-    "vite-plugin-solid": "^2.8.0"
+    "@tauri-apps/cli": "^1.6.0",
+    "bumpp": "^9.4.1",
+    "taze": "^0.14.2",
+    "typescript": "^5.5.3",
+    "unocss": "^0.61.2",
+    "vite": "^5.3.3",
+    "vite-plugin-solid": "^2.10.2"
   }
 }
